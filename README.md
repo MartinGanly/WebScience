@@ -23,6 +23,8 @@ purge  -- Removes all data from the database
 
 manual  -- Prints usage information to the console
 ```
+When using this application it should be noted that when the REST API's are used they make queries based on data that has been recieved from the streamer. The relevant Tweet ID's and User ID's are kept in files locally to be processed later. The REST API will not process anything that was added to the file less than one day ago. This is mainly due to the streamer processing brand new tweets where statistics like retweets, replies and quotes will not be relevant untill the tweet has been live for some time.
+If you would prefer to not use this feature the setting can be changed in code, or timestamps can be manipulated in the relevant files directly.
 
 ## Required Credentials
 
